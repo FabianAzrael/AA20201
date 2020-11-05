@@ -52,17 +52,17 @@ public class InsertionSort
     public int[] ordenarDatosMenor(int arr[])  
     {  
         int i, key, j;  
-        for (i = 1; i < arr.length; i++) 
+        for (i = 1; i < arr.length; i++) // 4^n
         {  
-            key = arr[i];  
-            j = i - 1;  
+            key = arr[i];  // 1
+            j = i - 1;  // 2
 
-            while (j >= 0 && arr[j] > key) 
+            while (j >= 0 && arr[j] > key) // 4^n
             {  
-                arr[j + 1] = arr[j];  
-                j = j - 1;  
+                arr[j + 1] = arr[j];  // 3
+                j = j - 1;  // 2
             }  
-            arr[j + 1] = key;  
+            arr[j + 1] = key;  // 3
         } 
         return arr;
     }  
@@ -71,17 +71,17 @@ public class InsertionSort
     public int[] ordenarDatosMayor(int arr[])  
     {  
         int i, key, j;  
-        for (i = 1; i < arr.length; i++) 
+        for (i = 1; i < arr.length; i++) //4^n 
         {  
-            key = arr[i];  
-            j = i - 1;  
+            key = arr[i];  // 1
+            j = i - 1;  // 2
 
-            while (j <= 0 && arr[j] < key) 
+            while (j <= 0 && arr[j] < key) // 4^n
             {  
-                arr[j + 1] = arr[j];  
-                j = j - 1;  
+                arr[j + 1] = arr[j];  // 3
+                j = j - 1;  // 2
             }  
-            arr[j + 1] = key;  
+            arr[j + 1] = key;  // 3
         } 
         return arr;
     }  
