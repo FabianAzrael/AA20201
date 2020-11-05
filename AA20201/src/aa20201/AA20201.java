@@ -19,9 +19,6 @@ import ordenamiento.InsertionSort;
  */
 public class AA20201 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) 
     {
         // TODO code application logic here
@@ -30,13 +27,13 @@ public class AA20201 {
         double[] tiempos = new double[n];
         InsertionSort I = new InsertionSort();
 
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < n; j++) // 4^n
         {
             //Cambiar el tercer valor en este caso el 4 para el tipo de caso 1 peor, 2 mejor 3 medio 4 aleatorio
-            aux = GeneradorDatos.generarArregloIntOrga(j+1,10,1,false);
+            aux = GeneradorDatos.generarArregloIntOrga(j+1,10,2,false); // 1
             //Cambiar el 1 en caso de querer ordenar de Mayor a Menor y 2 de Menor a Mayor
-            aux = I.ordenar(aux,1);
-            tiempos[j] = (int)I.gettTotal();
+            aux = I.ordenar(aux,2); // 1
+            tiempos[j] = (int)I.gettTotal(); // 1
         }  
 
         Grafica g1 = new Grafica("N","Tiempo","Tiempos");
